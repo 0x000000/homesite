@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title %{the boring title}
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag :defaults#, 'ga'
+    = csrf_meta_tag
+    %meta{:name => "google-site-verification", :content => "Ku7le68Mcx2LjlnUzZQF_25TtqoR4XksdYY4B4lppaI"}
+
+  %body
+    #header
+
+    #content
+      = yield
+
