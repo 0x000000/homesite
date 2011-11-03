@@ -1,0 +1,19 @@
+#stream
+  - stream_years_by stream do |year, months|
+    .year
+      %span=year
+
+      %ul.months
+        - stream_months_by months do |month, days|
+          %li.month
+            %span=I18n.l Time.utc(1987, month, 17), :format => '%B'
+
+            %ul.days
+              - stream_days_by days do |day, data|
+                %li
+                  .day
+                    %span=day
+                    - data.each do |entry|
+                      .entry
+                        →
+                        =link_to entry[:title], entry[:url]
