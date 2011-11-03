@@ -1,5 +1,6 @@
 Newsite::Application.routes.draw do
 
-  root :to => 'home#index'
+  match '/post/:name' => 'post#show'
 
+  root :to => 'home#index'
 end

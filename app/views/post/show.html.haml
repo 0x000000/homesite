@@ -1,0 +1,7 @@
+%h1= @post.title
+
+.date
+  %span= I18n.l @post.date, :format => "%d %B %Y"
+
+.post
+  = render :file => "/post/_#{params[:name]}.html.haml"
