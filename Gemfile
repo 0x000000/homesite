@@ -37,3 +37,5 @@ end
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
+gem 'russian'
+gem 'time_diff', :git => 'git://github.com/abhidsm/time_diff.git'
